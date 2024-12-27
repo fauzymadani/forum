@@ -12,15 +12,16 @@ input,
 textarea,
 button {
   margin: 0;
-  padding: 8px;
+  padding: 0px;
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
-  color: #d1d5db;
+  color: #ebdbb2;
+  /* Gruvbox Light Text */
 }
 
 body {
-  background-color: #1a1a1a;
-  /* Dark background */
+  background-color: #282828;
+  /* Gruvbox Background */
   margin: 0;
   font-size: 16px;
   line-height: 1.6;
@@ -28,25 +29,26 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #2c2f33;
-  /* Darker gray */
+  background-color: #3c3836;
+  /* Gruvbox Darker Gray */
   padding: 1rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #23272a;
+  border-bottom: 2px solid #504945;
+  /* Gruvbox Border */
 }
 
 .navbar a {
-  color: #d1d5db;
-  /* Light gray */
+  color: #ebdbb2;
+  /* Gruvbox Light Text */
   text-decoration: none;
   margin-left: 1rem;
 }
 
 .navbar a:hover {
-  color: #7289da;
-  /* Light blue for hover */
+  color: #fabd2f;
+  /* Gruvbox Yellow for Hover */
 }
 
 /* Container */
@@ -54,16 +56,16 @@ body {
   max-width: 800px;
   margin: 2rem auto;
   padding: 1rem;
-  background-color: #2c2f33;
-  /* Slightly lighter dark */
+  background-color: #3c3836;
+  /* Gruvbox Slightly Lighter Gray */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Thread List */
 .thread {
-  border-bottom: 1px solid #40444b;
-  /* Divider */
+  border-bottom: 1px solid #504945;
+  /* Gruvbox Divider */
   padding: 1rem 0;
 }
 
@@ -72,29 +74,35 @@ body {
 }
 
 .thread h3 {
-  color: #ffffff;
+  color: #fbf1c7;
+  /* Gruvbox Light Yellow */
   font-size: 1.5rem;
 }
 
 .thread p {
   margin-top: 0.5rem;
   font-size: 0.9rem;
-  color: #99aab5;
+  color: #bdae93;
+  /* Gruvbox Muted Text */
 }
 
 .thread a {
   text-decoration: none;
-  color: #7289da;
+  color: #d65d0e;
+  /* Gruvbox Orange */
 }
 
 .thread a:hover {
   text-decoration: underline;
 }
 
+/* Buttons */
 button,
 .btn {
-  background-color: #7289da;
-  color: white;
+  background-color: #d65d0e;
+  /* Gruvbox Orange */
+  color: #ebdbb2;
+  /* Gruvbox Light Text */
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -104,9 +112,11 @@ button,
 
 button:hover,
 .btn:hover {
-  background-color: #5a74b7;
+  background-color: #fabd2f;
+  /* Gruvbox Yellow */
 }
 
+/* Form Elements */
 form {
   display: flex;
   flex-direction: column;
@@ -116,29 +126,35 @@ form {
 
 form label {
   font-size: 1rem;
-  color: #d1d5db;
+  color: #ebdbb2;
+  /* Gruvbox Light Text */
 }
 
 form input,
 form textarea {
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid #40444b;
+  border: 1px solid #504945;
   border-radius: 4px;
-  background-color: #23272a;
-  color: #d1d5db;
+  background-color: #282828;
+  /* Gruvbox Background */
+  color: #ebdbb2;
+  /* Gruvbox Light Text */
 }
 
 form input:focus,
 form textarea:focus {
   outline: none;
-  border-color: #7289da;
+  border-color: #d65d0e;
+  /* Gruvbox Orange */
 }
 
+/* Comments */
 .comment {
   margin: 1rem 0;
   padding: 0.5rem;
-  background-color: #23272a;
+  background-color: #3c3836;
+  /* Gruvbox Slightly Lighter Gray */
   border-radius: 4px;
 }
 
@@ -149,39 +165,79 @@ form textarea:focus {
 .comment small {
   display: block;
   margin-top: 0.5rem;
-  color: #99aab5;
+  color: #bdae93;
+  /* Gruvbox Muted Text */
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem 0;
   margin-top: 2rem;
-  background-color: #23272a;
-  color: #99aab5;
+  background-color: #3c3836;
+  /* Gruvbox Slightly Lighter Gray */
+  color: #bdae93;
+  /* Gruvbox Muted Text */
   font-size: 0.9rem;
 }
 
+/* Threads Link */
 .threads-link a {
   text-decoration: none;
-  color: yellow;
+  color: #fabd2f;
+  /* Gruvbox Yellow */
 }
 
 .threads-list {
-  border: 1px solid white;
+  border: 1px solid #ebdbb2;
+  padding: 20px;
+  /* Gruvbox Light Text */
 }
 
+/* Buttons */
 button,
 .btn {
-  background-color: #7289da;
-  color: white;
+  background-color: #d65d0e;
+  /* Gruvbox Orange */
+  color: #ebdbb2;
+  /* Gruvbox Light Text */
   border: none;
   padding: 0.5rem 1rem;
-  /* Padding yang sesuai */
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   display: inline-block;
-  /* Agar hanya selebar konten */
   width: auto;
-  /* Mencegah tombol melebar */
+}
+
+button:hover,
+.btn:hover {
+  background-color: #fabd2f;
+  /* Gruvbox Yellow */
+}
+
+.content {
+  padding: 20px;
+}
+
+.content a {
+  color: #ebdbb2;
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.content a:hover {
+  color: #b16268;
+}
+
+.content .content-header,
+.content .content-main {
+  padding: 20px;
+  margin: 10px;
+}
+
+.content-main {
+  padding: 20px;
 }

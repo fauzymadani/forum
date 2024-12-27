@@ -7,13 +7,20 @@ $query = $pdo->query("SELECT threads.*, users.username FROM threads JOIN users O
 $threads = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<h1>Forum Threads</h1>
-<a href="create_thread.php"><button>Create New Thread</button></a>
-<ul class="threads-list">
-  <?php foreach ($threads as $thread): ?>
-    <li class="threads-link">
-      <a href="thread.php?id=<?= $thread['id'] ?>"><?= htmlspecialchars($thread['title']) ?></a>
-      <p>by <?= htmlspecialchars($thread['username']) ?> at <?= $thread['created_at'] ?></p>
-    </li>
-  <?php endforeach; ?>
-</ul>
+<link rel="stylesheet" href="assets/style.css">
+<div class="content">
+  <div class="content-header">
+    <h1>Forum Threads</h1>
+    <a href="create_thread.php"><button>Create New Thread</button></a>
+  </div>
+  <div class="content-main">
+    <ul class="threads-list">
+      <?php foreach ($threads as $thread): ?>
+        <li class="threads-link">
+          <a href="thread.php?id=<?= $thread['id'] ?>"><?= htmlspecialchars($thread['title']) ?></a>
+          <p>by <?= htmlspecialchars($thread['username']) ?> at <?= $thread['created_at'] ?></p>
+        </li>
+      <?php endforeach; ?>
+    </ul>
+  </div>
+</div>
