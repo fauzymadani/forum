@@ -1,0 +1,187 @@
+/* General Reset */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+li,
+a,
+input,
+textarea,
+button {
+  margin: 0;
+  padding: 8px;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  color: #d1d5db;
+}
+
+body {
+  background-color: #1a1a1a;
+  /* Dark background */
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2c2f33;
+  /* Darker gray */
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #23272a;
+}
+
+.navbar a {
+  color: #d1d5db;
+  /* Light gray */
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.navbar a:hover {
+  color: #7289da;
+  /* Light blue for hover */
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #2c2f33;
+  /* Slightly lighter dark */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Thread List */
+.thread {
+  border-bottom: 1px solid #40444b;
+  /* Divider */
+  padding: 1rem 0;
+}
+
+.thread:last-child {
+  border-bottom: none;
+}
+
+.thread h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.thread p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #99aab5;
+}
+
+.thread a {
+  text-decoration: none;
+  color: #7289da;
+}
+
+.thread a:hover {
+  text-decoration: underline;
+}
+
+button,
+.btn {
+  background-color: #7289da;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #5a74b7;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+form label {
+  font-size: 1rem;
+  color: #d1d5db;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #40444b;
+  border-radius: 4px;
+  background-color: #23272a;
+  color: #d1d5db;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #7289da;
+}
+
+.comment {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background-color: #23272a;
+  border-radius: 4px;
+}
+
+.comment p {
+  margin-bottom: 0.5rem;
+}
+
+.comment small {
+  display: block;
+  margin-top: 0.5rem;
+  color: #99aab5;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  background-color: #23272a;
+  color: #99aab5;
+  font-size: 0.9rem;
+}
+
+.threads-link a {
+  text-decoration: none;
+  color: yellow;
+}
+
+.threads-list {
+  border: 1px solid white;
+}
+
+button,
+.btn {
+  background-color: #7289da;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  /* Padding yang sesuai */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  /* Agar hanya selebar konten */
+  width: auto;
+  /* Mencegah tombol melebar */
+}
