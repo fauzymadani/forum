@@ -1,4 +1,4 @@
-/* General Reset */
+/* general page style with gruvbox dark theme */
 body,
 h1,
 h2,
@@ -16,12 +16,10 @@ button {
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
   color: #ebdbb2;
-  /* Gruvbox Light Text */
 }
 
 body {
   background-color: #282828;
-  /* Gruvbox Background */
   margin: 0;
   font-size: 16px;
   line-height: 1.6;
@@ -30,13 +28,12 @@ body {
 /* Navbar */
 .navbar {
   background-color: #3c3836;
-  /* Gruvbox Darker Gray */
-  padding: 1rem 1rem;
+  padding: 0.7rem 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid #504945;
-  /* Gruvbox Border */
+  font-family: monospace;
 }
 
 .navbar a {
@@ -44,6 +41,8 @@ body {
   /* Gruvbox Light Text */
   text-decoration: none;
   margin-left: 1rem;
+  font-family: monospace;
+  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
@@ -110,11 +109,7 @@ button,
   transition: background-color 0.3s ease;
 }
 
-button:hover,
-.btn:hover {
-  background-color: #fabd2f;
-  /* Gruvbox Yellow */
-}
+
 
 /* Form Elements */
 form {
@@ -205,16 +200,11 @@ button,
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   display: inline-block;
   width: auto;
 }
 
-button:hover,
-.btn:hover {
-  background-color: #fabd2f;
-  /* Gruvbox Yellow */
-}
+
 
 .content {
   padding: 20px;
@@ -240,4 +230,88 @@ button:hover,
 
 .content-main {
   padding: 20px;
+}
+
+
+.threads-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #3c3836;
+  color: #ebdbb2;
+  font-size: 1rem;
+  text-align: left;
+  border: 1px solid #504945;
+}
+
+.threads-table th,
+.threads-table td {
+  padding: 12px 15px;
+  border: 1px solid #504945;
+}
+
+.threads-table th {
+  background-color: #282828;
+  color: #fabd2f;
+  font-weight: bold;
+}
+
+.threads-table tr:nth-child(even) {
+  background-color: #32302f;
+}
+
+.threads-table tr:hover {
+  background-color: #504945;
+}
+
+.threads-table a {
+  color: #fabd2f;
+  text-decoration: none;
+}
+
+.threads-table a:hover {
+  color: #d65d0e;
+  text-decoration: underline;
+}
+
+.threads-table button {
+  background-color: #d65d0e;
+  color: #ebdbb2;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.threads-table button:hover {
+  background-color: #fabd2f;
+}
+
+
+.navbar-button {
+  background-color: #427b58;
+  border-radius: 10px;
+  border: none;
+  border-bottom: 8px solid #2e4f3a;
+  padding: 10px 20px;
+  color: #ebdbb2;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 4px 0px #2e4f3a;
+  transition: all 0.2s ease;
+  font-family: monospace;
+  font-size: 15px;
+}
+
+.navbar-button:hover {
+  transform: translateY(2px);
+  box-shadow: 0px 2px 0px #2e4f3a;
+}
+
+.navbar-button:active {
+  transform: translateY(6px);
+  box-shadow: 0px 0px 0px #2e4f3a;
+  border-bottom: 2px solid #2e4f3a;
 }

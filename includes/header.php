@@ -1,16 +1,17 @@
 <?php session_start(); ?>
 <link rel="stylesheet" href="../assets/style.css">
 <div class="navbar">
-<header>
+  <header>
     <nav>
-        <a href="index.php">Home</a>
-        <?php if (isset($_SESSION['user_id'])): ?>
-            <a href="profile.php">Profile</a>
-            <a href="logout.php">Logout</a>
-        <?php else: ?>
-            <a href="login.php">Login</a>
-            <a href="register.php">Register</a>
-        <?php endif; ?>
+      <a href="index.php"><button class="navbar-button">~/Home</button></a>
+      <a href="../commit.php"><button class="navbar-button">~/Changelogs</button></a>
+      <?php if (isset($_SESSION['user_id'])): ?>
+        <a href="profile.php"><button class="navbar-button">~/Profile</button></a>
+        <a href="logout.php"><button class="navbar-button">Logout</button></a>
+      <?php else: ?>
+        <a href="login.php"><button class="navbar-button">Login</button></a>
+        <a href="register.php"><button class="navbar-button">Register</button></a>
+      <?php endif; ?>
     </nav>
-</header>
+  </header>
 </div>

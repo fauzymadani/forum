@@ -14,13 +14,25 @@ $threads = $query->fetchAll(PDO::FETCH_ASSOC);
     <a href="create_thread.php"><button>Create New Thread</button></a>
   </div>
   <div class="content-main">
-    <ul class="threads-list">
-      <?php foreach ($threads as $thread): ?>
-        <li class="threads-link">
-          <a href="thread.php?id=<?= $thread['id'] ?>"><?= htmlspecialchars($thread['title']) ?></a>
-          <p>by <?= htmlspecialchars($thread['username']) ?> at <?= $thread['created_at'] ?></p>
-        </li>
-      <?php endforeach; ?>
-    </ul>
+    <table class="threads-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php foreach ($threads as $thread): ?>
+          <tr>
+            <td><a href="thread.php?id=<?= $thread['id'] ?>"><?= htmlspecialchars($thread['title']) ?></a></td>
+            <td><?= htmlspecialchars($thread['username']) ?></td>
+            <td><?= $thread['created_at'] ?></td>
+            <td><a href="thread.php?id=<?= $thread['id'] ?>"><button>View</button></a></td>
+          </tr>
+        <?php endforeach; ?>
+      </tbody>
+    </table>
   </div>
 </div>
