@@ -1,0 +1,113 @@
+.content {
+  padding: 20px;
+}
+
+.content a {
+  color: #ebdbb2;
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.content a:hover {
+  color: #b16268;
+}
+
+.content .content-header,
+.content .content-main {
+  padding: 20px;
+  margin: 10px;
+}
+
+.threads-link {
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #504945;
+  border-radius: 8px;
+  background-color: #3c3836;
+  transition: background-color 0.3s ease;
+}
+
+.threads-link a {
+  font-size: 18px;
+  font-family: monospace;
+}
+
+.threads-link p {
+  margin: 5px 0 0;
+  color: #bdae93;
+  font-size: 14px;
+}
+
+.threads-link:hover {
+  background-color: #282828;
+}
+
+.threads-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.threads-link {
+  display: flex;
+  align-items: flex-start;
+  background-color: #282828;
+  /* Warna kotak */
+  border: 1px solid #3c3836;
+  /* Border kotak */
+  border-radius: 8px;
+  /* Sudut melengkung */
+  margin-bottom: 16px;
+  /* Jarak antar thread */
+  padding: 16px;
+  /* Ruang dalam kotak */
+  transition: background-color 0.3s ease;
+}
+
+.threads-link:hover {
+  background-color: #3c3836;
+  /* Warna saat hover */
+}
+
+.thread-vote {
+  flex-shrink: 0;
+  margin-right: 16px;
+  text-align: center;
+  color: #ebdbb2;
+  /* Warna teks */
+}
+
+.thread-vote p {
+  margin: 4px 0;
+  /* Spasi antar baris */
+  font-size: 14px;
+}
+
+.thread-content a {
+  font-size: 18px;
+  /* Ukuran font judul */
+  font-family: monospace;
+  text-decoration: none;
+  color: #fabd2f;
+  /* Warna teks judul */
+}
+
+.thread-content a:hover {
+  text-decoration: underline;
+  color: #fe8019;
+  /* Warna hover */
+}
+
+.thread-content p {
+  color: #d4be98;
+  /* Warna deskripsi */
+  margin: 8px 0;
+  /* Spasi deskripsi */
+}
+
+.thread-content small {
+  color: #928374;
+  /* Warna info tambahan */
+  font-size: 12px;
+}

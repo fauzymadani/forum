@@ -1,4 +1,4 @@
-/* General Reset */
+/* general page style with gruvbox dark theme */
 body,
 h1,
 h2,
@@ -12,15 +12,14 @@ input,
 textarea,
 button {
   margin: 0;
-  padding: 8px;
+  padding: 0px;
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
-  color: #d1d5db;
+  color: #ebdbb2;
 }
 
 body {
-  background-color: #1a1a1a;
-  /* Dark background */
+  background-color: #282828;
   margin: 0;
   font-size: 16px;
   line-height: 1.6;
@@ -28,25 +27,27 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #2c2f33;
-  /* Darker gray */
-  padding: 1rem 1rem;
+  background-color: #3c3836;
+  padding: 0.7rem 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #23272a;
+  border-bottom: 2px solid #504945;
+  font-family: monospace;
 }
 
 .navbar a {
-  color: #d1d5db;
-  /* Light gray */
+  color: #ebdbb2;
+  /* Gruvbox Light Text */
   text-decoration: none;
   margin-left: 1rem;
+  font-family: monospace;
+  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #7289da;
-  /* Light blue for hover */
+  color: #fabd2f;
+  /* Gruvbox Yellow for Hover */
 }
 
 /* Container */
@@ -54,16 +55,16 @@ body {
   max-width: 800px;
   margin: 2rem auto;
   padding: 1rem;
-  background-color: #2c2f33;
-  /* Slightly lighter dark */
+  background-color: #3c3836;
+  /* Gruvbox Slightly Lighter Gray */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Thread List */
 .thread {
-  border-bottom: 1px solid #40444b;
-  /* Divider */
+  border-bottom: 1px solid #504945;
+  /* Gruvbox Divider */
   padding: 1rem 0;
 }
 
@@ -72,29 +73,35 @@ body {
 }
 
 .thread h3 {
-  color: #ffffff;
+  color: #fbf1c7;
+  /* Gruvbox Light Yellow */
   font-size: 1.5rem;
 }
 
 .thread p {
   margin-top: 0.5rem;
   font-size: 0.9rem;
-  color: #99aab5;
+  color: #bdae93;
+  /* Gruvbox Muted Text */
 }
 
 .thread a {
   text-decoration: none;
-  color: #7289da;
+  color: #d65d0e;
+  /* Gruvbox Orange */
 }
 
 .thread a:hover {
   text-decoration: underline;
 }
 
+/* Buttons */
 button,
 .btn {
-  background-color: #7289da;
-  color: white;
+  background-color: #d65d0e;
+  /* Gruvbox Orange */
+  color: #ebdbb2;
+  /* Gruvbox Light Text */
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -102,11 +109,9 @@ button,
   transition: background-color 0.3s ease;
 }
 
-button:hover,
-.btn:hover {
-  background-color: #5a74b7;
-}
 
+
+/* Form Elements */
 form {
   display: flex;
   flex-direction: column;
@@ -116,29 +121,35 @@ form {
 
 form label {
   font-size: 1rem;
-  color: #d1d5db;
+  color: #ebdbb2;
+  /* Gruvbox Light Text */
 }
 
 form input,
 form textarea {
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid #40444b;
+  border: 1px solid #504945;
   border-radius: 4px;
-  background-color: #23272a;
-  color: #d1d5db;
+  background-color: #282828;
+  /* Gruvbox Background */
+  color: #ebdbb2;
+  /* Gruvbox Light Text */
 }
 
 form input:focus,
 form textarea:focus {
   outline: none;
-  border-color: #7289da;
+  border-color: #d65d0e;
+  /* Gruvbox Orange */
 }
 
+/* Comments */
 .comment {
   margin: 1rem 0;
   padding: 0.5rem;
-  background-color: #23272a;
+  background-color: #3c3836;
+  /* Gruvbox Slightly Lighter Gray */
   border-radius: 4px;
 }
 
@@ -149,39 +160,162 @@ form textarea:focus {
 .comment small {
   display: block;
   margin-top: 0.5rem;
-  color: #99aab5;
+  color: #bdae93;
+  /* Gruvbox Muted Text */
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem 0;
   margin-top: 2rem;
-  background-color: #23272a;
-  color: #99aab5;
+  background-color: #3c3836;
+  /* Gruvbox Slightly Lighter Gray */
+  color: #bdae93;
+  /* Gruvbox Muted Text */
   font-size: 0.9rem;
 }
 
+/* Threads Link */
 .threads-link a {
   text-decoration: none;
-  color: yellow;
+  color: #fabd2f;
+  /* Gruvbox Yellow */
 }
 
 .threads-list {
-  border: 1px solid white;
+  border: 1px solid #ebdbb2;
+  padding: 20px;
+  /* Gruvbox Light Text */
 }
 
+/* Buttons */
 button,
 .btn {
-  background-color: #7289da;
-  color: white;
+  background-color: #d65d0e;
+  /* Gruvbox Orange */
+  color: #ebdbb2;
+  /* Gruvbox Light Text */
   border: none;
   padding: 0.5rem 1rem;
-  /* Padding yang sesuai */
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  width: auto;
+}
+
+
+
+.content {
+  padding: 20px;
+}
+
+.content a {
+  color: #ebdbb2;
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.content a:hover {
+  color: #b16268;
+}
+
+.content .content-header,
+.content .content-main {
+  padding: 20px;
+  margin: 10px;
+}
+
+.content-main {
+  padding: 20px;
+}
+
+
+.threads-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #3c3836;
+  color: #ebdbb2;
+  font-size: 1rem;
+  text-align: left;
+  border: 1px solid #504945;
+}
+
+.threads-table th,
+.threads-table td {
+  padding: 12px 15px;
+  border: 1px solid #504945;
+}
+
+.threads-table th {
+  background-color: #282828;
+  color: #fabd2f;
+  font-weight: bold;
+}
+
+.threads-table tr:nth-child(even) {
+  background-color: #32302f;
+}
+
+.threads-table tr:hover {
+  background-color: #504945;
+}
+
+.threads-table a {
+  color: #fabd2f;
+  text-decoration: none;
+}
+
+.threads-table a:hover {
+  color: #d65d0e;
+  text-decoration: underline;
+}
+
+.threads-table button {
+  background-color: #d65d0e;
+  color: #ebdbb2;
+  border: none;
+  padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  display: inline-block;
-  /* Agar hanya selebar konten */
-  width: auto;
-  /* Mencegah tombol melebar */
+}
+
+.threads-table button:hover {
+  background-color: #fabd2f;
+}
+
+
+.navbar-button {
+  background-color: #427b58;
+  border-radius: 10px;
+  border: none;
+  border-bottom: 8px solid #2e4f3a;
+  padding: 10px 20px;
+  color: #ebdbb2;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 4px 0px #2e4f3a;
+  transition: all 0.2s ease;
+  font-family: monospace;
+  font-size: 15px;
+}
+
+.navbar-button:hover {
+  transform: translateY(6px);
+  box-shadow: 0px 2px 0px #2e4f3a;
+}
+
+.navbar-button:active {
+  transform: translateY(6px);
+  box-shadow: 0px 0px 0px #2e4f3a;
+  border-bottom: 2px solid #2e4f3a;
+}
+
+.announcement-text {
+  margin-bottom: 20px;
 }
