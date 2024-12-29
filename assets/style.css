@@ -306,7 +306,7 @@ button,
 }
 
 .navbar-button:hover {
-  transform: translateY(2px);
+  transform: translateY(6px);
   box-shadow: 0px 2px 0px #2e4f3a;
 }
 
@@ -314,4 +314,8 @@ button,
   transform: translateY(6px);
   box-shadow: 0px 0px 0px #2e4f3a;
   border-bottom: 2px solid #2e4f3a;
+}
+
+.announcement-text {
+  margin-bottom: 20px;
 }

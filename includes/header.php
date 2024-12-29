@@ -1,4 +1,12 @@
-<?php session_start(); ?>
+<?php
+session_start();
+if (isset($_SESSION['user_id'])) {
+  $stmt = $pdo->prepare("UPDATE users SET last_active = NOW() WHERE id = ?");
+  $stmt->execute([$_SESSION['user_id']]);
+}
+
+?>
+
 <link rel="stylesheet" href="../assets/style.css">
 <div class="navbar">
   <header>

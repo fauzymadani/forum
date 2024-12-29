@@ -9,7 +9,18 @@ $threads = $query->fetchAll(PDO::FETCH_ASSOC);
 
 <link rel="stylesheet" href="assets/style.css">
 <div class="content">
+
   <div class="content-header">
+    <div class="announcement-text">
+      <p><strong>Ahoy there, </strong>This website is still under development...</p>
+      <strong>Build with:</strong>
+      <pre><code>
+PHP 8.3.15 (cli) (built: Dec 24 2024 06:13:33) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.3.15, Copyright (c) Zend Technologies
+with Zend OPcache v8.3.15, Copyright (c), by Zend Technologies
+      </code></pre>
+    </div>
     <h1>Forum Threads</h1>
     <a href="create_thread.php"><button>Create New Thread</button></a>
   </div>
@@ -36,3 +47,12 @@ $threads = $query->fetchAll(PDO::FETCH_ASSOC);
     </table>
   </div>
 </div>
+<footer>
+  <?php
+  $filename = 'index.php';
+  if (file_exists($filename)) {
+    echo "last modified: " . date("F d Y H:i:s.", filemtime($filename));
+  }
+  ?>
+  <p>copyright 2024 fauzymadani</p>
+</footer>

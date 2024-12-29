@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Commit Details</title>
+  <title>Development Branch Commit Details</title>
   <style>
     * {
       font-family: monospace;
@@ -84,10 +84,9 @@
 
   $username = "fauzymadani";
   $repo = "forum";
-  $url = "https://api.github.com/repos/$username/$repo/commits";
+  $branch = "development";
+  $url = "https://api.github.com/repos/$username/$repo/commits?sha=$branch";
 
-  //TODO: improve the codes
-  //HACK: the code is like trash
   $opts = [
     "http" => [
       "method" => "GET",
@@ -97,7 +96,9 @@
   $context = stream_context_create($opts);
   $data = file_get_contents($url, false, $context);
   $commits = json_decode($data, true);
-  echo "<h1>commit log for this project (main branch): </h1>";
+
+  echo "<h1>Commit log for this project (development branch): </h1>";
+
   foreach ($commits as $commit) {
     $sha = $commit['sha'];
     echo "<div class='commit'>";
@@ -115,12 +116,11 @@
   }
   ?>
 
-
 </body>
 
 </html>
-<!--TODO: add more features -->
-<a href="index.php">go back</a>
+<!-- TODO: Add more features -->
+<a href="index.php">Go back</a>
 <h1>
-  <p>see commit for development branch <a href="devcommit.php">here.</a></p>
+  <p>see commit for main branch <a href="commit.php">here.</a></p>
 </h1>
